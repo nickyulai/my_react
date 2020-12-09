@@ -1,7 +1,7 @@
 import React from 'react'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
-import FormikControl from './FormilControl'
+import FormikControl from './FormikControl'
 
 function LoginForm(props) {
     const initialValues = {
@@ -34,7 +34,7 @@ function LoginForm(props) {
                         label='Password'
                         name='password' />
                         <button type='submit' disabled={!formik.isValid}>
-                            Submit
+                            Log In
                         </button>
                     </Form>
                 }
