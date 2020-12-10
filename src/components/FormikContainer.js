@@ -1,7 +1,7 @@
 import React from 'react'
 import { Formik, Form} from  'formik'
 import * as Yup from 'yup'
-import FormilControl from './FormilControl'
+import FormilControl from './FormikControl'
 
 function FormikContainer(props) {
   const dropdownOptions = [
