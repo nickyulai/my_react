@@ -1,7 +1,6 @@
 import React from 'react'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
-import FormilControl from './FormikControl'
 import FormikControl from './FormikControl'
 
 function FormikContainer(props) {
@@ -27,6 +26,7 @@ function FormikContainer(props) {
     selectOption: '',
     radioOption: '',
     checkboxOptions: [],
+    birthDate: null
   }
   const vaildationSchema = Yup.object({
     email: Yup.string().required('Required'),
@@ -34,6 +34,7 @@ function FormikContainer(props) {
     selectOption: Yup.string().required('Required'),
     radioOption: Yup.string().required('Required'),
     checkboxOption: Yup.array().required('Required'),
+    birthDate: Yup.date().required('Required').nullable(),
   })
   const onSubmit = Values => console.log('Form data', values)
   return (
@@ -44,18 +45,18 @@ function FormikContainer(props) {
     >
       {formik => (
         <Form>
-          <FormilControl
+          <FormikControl
             control='input'
             type='email'
             label='Email'
             name='email'
           />
-          <FormilControl
+          <FormikControl
             control='text'
             label='Description'
             name='description'
           />
-          <FormilControl
+          <FormikControl
             control='select'
             label='Select a topic'
             name='selectOption'
@@ -73,6 +74,12 @@ function FormikContainer(props) {
             name='checkboxOption'
             options={checkboxOptions}
           />
+          <FormikControl 
+            control='date'
+            label='Pick a date'
+            name='birthDate'
+          />
+          <onSubmit>Login</onSubmit>
           <button type='submit'>
             Submit
           </button>
