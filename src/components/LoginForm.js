@@ -5,7 +5,7 @@ import FormikControl from './FormikControl'
 
 function LoginForm(props) {
     const initialValues = {
-        email: '', 
+        email: '',
         password: '',
     }
 
@@ -24,15 +24,15 @@ function LoginForm(props) {
                 formik => {
                     return <Form>
                         <FormikControl
-                        control='input'
-                        type='email'
-                        label='Email'
-                        name='email' />
+                            control='chakrainput'
+                            type='email'
+                            label='Email'
+                            name='email' />
                         <FormikControl
-                        control='input'
-                        type='password'
-                        label='Password'
-                        name='password' />
+                            control='chakrainput'
+                            type='password'
+                            label='Password'
+                            name='password' />
                         <button type='submit' disabled={!formik.isValid}>
                             Log In
                         </button>

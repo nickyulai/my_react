@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
 }
-
+/* 
 label {
   font-weight: bold;
   display: flex;
   margin-bottom: 5px;
-}
+} */
 
-input + label {
+/* input + label {
   font-weight: bold;
   display: inline-flex;
   margin-right: 20px;
@@ -31,7 +31,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   /* margin-bottom: 20px; */
-}
+/* } */ 
 
 .form-control {
   margin-bottom: 20px;
