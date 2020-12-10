@@ -4,6 +4,7 @@ import Textarea from './Textarea'
 import Select from './Select'
 import RadioButtons from './RadioButtons'
 import ChakraInput from './ChakraInput'
+import CheckboxGroup from './CheckboxGroup'
 
 function FormikControl(props) {
   const { control, ...rest } = props
@@ -17,6 +18,7 @@ function FormikControl(props) {
     case 'radio':
       return <RadioButtons {...rest} />
     case 'checkbox':
+      return <CheckboxGroup {...rest} />
     case 'date':
     case 'chakrainput': 
       return <ChakraInput {...rest} />
